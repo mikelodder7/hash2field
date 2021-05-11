@@ -1,0 +1,28 @@
+[package]
+authors = ["Michael Lodder <redmike7@gmail.com>"]
+categories = ["cryptography", "no-std"]
+description = "Implements safe hash to a finite field as described in https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-hash-to-curve-11#section-5"
+documentation = "https://docs.rs/hash2field"
+edition = "2018"
+keywords = ["crypto", "hashing", "ecc", "no-std"]
+license = "Apache-2.0"
+name = "hash2field"
+readme = "README.md"
+repository = "https://github.com/mikelodder7/hash2field"
+version = "0.2.0"
+
+[dependencies]
+digest = "0.9"
+elliptic-curve = { version = "0.9", features = ["arithmetic"] }
+subtle = "2.4"
+
+[dev-dependencies]
+hex = "0.4"
+k256 = { version = "0.8", features = ["expose-field"] }
+num-bigint = "0.4"
+num-integer = "0.1"
+sha2 = "0.9"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
